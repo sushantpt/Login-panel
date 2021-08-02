@@ -183,7 +183,7 @@ public class Main extends javax.swing.JFrame {
     private void jButtonLogiinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLogiinActionPerformed
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/logindb", "root", "");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/logindb", "rootUserName", "passwordHere");
             String query = "SELECT *FROM user_info WHERE email=? AND password=?";
             PreparedStatement ppst = con.prepareStatement(query);
             ppst.setString(1, email.setText());
